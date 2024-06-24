@@ -22,6 +22,7 @@
         }
         nav {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             background-color: #444;
         }
@@ -29,6 +30,8 @@
             color: #fff;
             padding: 15px 20px;
             text-decoration: none;
+            flex: 1 1 auto;
+            text-align: center;
         }
         nav a:hover {
             background-color: #555;
@@ -43,6 +46,11 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
         }
         .gallery img {
             width: 100%;
@@ -59,6 +67,7 @@
             margin-bottom: 10px;
             border: 1px solid #ccc;
             border-radius: 4px;
+            width: 100%;
         }
         .form-contact button {
             padding: 10px;
@@ -81,6 +90,7 @@
         .social-icons {
             display: flex;
             justify-content: center;
+            gap: 10px;
         }
         .social-icons a {
             color: #fff;
@@ -89,6 +99,20 @@
         }
         .social-icons a:hover {
             color: #ddd;
+        }
+
+        @media (max-width: 768px) {
+            nav a {
+                flex: 1 1 100%;
+                padding: 10px;
+            }
+            section {
+                margin: 10px;
+                padding: 10px;
+            }
+            .gallery img {
+                width: 100%;
+            }
         }
     </style>
 </head>
